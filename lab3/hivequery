@@ -1,0 +1,3 @@
+SELECT substr(email, locate(’@’, email)+1), count(substr(email, locate(’@’, email)+1))
+  FROM hadoopmail
+  GROUP BY substr(email, locate(’@’, email)+1);
